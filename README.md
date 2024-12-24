@@ -115,7 +115,7 @@ Once we’ve verified our EC2 Instance is running, navigate to the top right pan
 
 Click on the “SSH Client tab”, as show below. AWS is helpful enough to suggest some instructions on how we connect to the EC2 Instance, however, I will walk you through the whole process.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/f29a6a7f466de1d546947b16e646f3b8d2195a40/Images/Screenshot%202024-12-23%20111248.png)
 
 Use Key pair to ssh into EC2 Instance from CLI on local system
 Locate the directory path where the downloaded key pair is stored and run the following command to change into that working directory —
