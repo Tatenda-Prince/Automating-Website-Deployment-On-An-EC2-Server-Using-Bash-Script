@@ -109,6 +109,7 @@ Make sure all configurations align with our previous steps, then click “Launch
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/3e0dfedd8225d3b002a6571ad797287c5bdb4620/Images/Screenshot%202024-12-23%20111044.png)
 
 
+
 Success!
 You’ve just launched your first Amazon EC2 Instance on AWS. Now we can proceed to Step 2 — SSH into the EC2 Instance.
 
