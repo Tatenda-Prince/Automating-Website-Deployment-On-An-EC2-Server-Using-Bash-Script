@@ -138,6 +138,17 @@ We need to run the ssh command in your CLI and in addition, add the “-i” opt
 
 You can find your EC2 Instance Public IPv4 address by navigating to the EC2 Instance dashboard and copying the “Pubic IPv4 address”, as seen below.
 
+Run the command below to ssh into the EC2 with the key pair file —
+
+ssh -i "[key_pair_name.pem]" ec2-user@[EC2_Public_IPv4_Address].compute-1.amazonaws.com
+
+Success!
+If you did all the steps correctly, you should have similar results as seen below and now you have connected into your EC2 Instance!
+
+![image alt]()
+
+
+
 
 
 
