@@ -111,11 +111,15 @@ Navigate to your EC2 Instances and verify that the new EC2 Instance we just laun
 
 Once we’ve verified our EC2 Instance is running, navigate to the top right pane, click “Actions” and select “Connect” as seen below.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/7698932cdadf80fd0d88c922021d6bff2321ea6f/Images/Screenshot%202024-12-23%20111154.png)
+
 
 Click on the “SSH Client tab”, as show below. AWS is helpful enough to suggest some instructions on how we connect to the EC2 Instance, however, I will walk you through the whole process.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/f29a6a7f466de1d546947b16e646f3b8d2195a40/Images/Screenshot%202024-12-23%20111248.png)
+
 
 Use Key pair to ssh into EC2 Instance from CLI on local system
 Locate the directory path where the downloaded key pair is stored and run the following command to change into that working directory —
@@ -145,6 +149,7 @@ ssh -i "[key_pair_name.pem]" ec2-user@[EC2_Public_IPv4_Address].compute-1.amazon
 Success!
 If you did all the steps correctly, you should have similar results as seen below and now you have connected into your EC2 Instance!
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/d5c6ecbecf06407c15579f2ec98c1148dc867d47/Images/Screenshot%202024-12-23%20112115.png)
 
 
@@ -156,30 +161,8 @@ Use Vim or the Nano to create and edit a new script file with the following comm
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/20e4cf0757417f7579dfd0118794ac5e878c07d0/Images/Screenshot%202024-12-23%20115608.png)
 
-The bash script below updates all yum package repositories then installs an Apache Web Server to serve content to our browsers. The server is then started and then enabled. The last line adds html code to an “index.html” file which enables our Server to serve our custom Website through our EC2 Instance.
 
-#!/bin/bash
-
-#Update all yum package repositories
-yum update -y
-
-#Install Apache Web Server
-yum install -y httpd.x86_64
-
-#Start and Enable Apache Web Server
-systemctl start httpd.service
-systemctl enable httpd.service
-
-#Adds our custom webpage html code to "index.html" file.
-echo "<html><body><h1>Welcome to REX TECH!</h1></body><html>" > /var/www/html/index.html
-
-
-We now need to give the user executable rights so we can run the script. To accomplish these two tasks, run the follow commands respectively —
-
-sudo chmod u+x [script_name.sh]
-
-
-./[scipt_name.sh]
+The bash script above  updates all yum package repositories then installs an Apache Web Server to serve content to our browsers. The server is then started and then enabled. The last line adds html code to an “index.html” file which enables our Server to serve our custom Website through our EC2 Instance.
 
 
 # Step 4: View custom Webpage served by Apache Web Server, powered on EC2.
