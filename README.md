@@ -70,7 +70,7 @@ Proceed to the Instance Type options —
 
 We will choose the “t2.micro” which is part of the AWS free tier. This instance type offers 750 hours free use of Linux and Windows instances each month for one year for new AWS customers.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/9c2145b50565055bcc109215d4775f39356b3028/Images/Screenshot%202024-12-23%20110727.png)
 
 Proceed to the Key pair option —
 
