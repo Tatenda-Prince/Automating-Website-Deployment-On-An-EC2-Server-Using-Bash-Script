@@ -49,7 +49,9 @@ Navigate to EC2 configuration page
 
 Before we can configure the Amazon EC2 Instance, we need to first sign into your AWS IAM Account. After signing into your AWS account, navigate to the top of dashboard to search for the EC2 Service, click on “EC2”, then “Launch instance”, as seen below.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/a35323baf56102c1eda7471c458d66568461d9b4/Images/Screenshot%202024-12-23%20110527.png)
+
 
 
 
