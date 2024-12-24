@@ -52,7 +52,9 @@ Before we can configure the Amazon EC2 Instance, we need to first sign into your
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/a35323baf56102c1eda7471c458d66568461d9b4/Images/Screenshot%202024-12-23%20110527.png)
 
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/c2abe1c466450931f0870d7892b468b4413c09bc/Images/Screenshot%202024-12-23%20110601.png)
+
 
 You should now see your Amazon EC2 configuration options page. Note, most of the configurations will remain at their default state to launch our required EC2 Instance.
 
@@ -63,6 +65,7 @@ The first field allows you to name your EC2 Instance. We also have the option to
 Continue to select the desired Amazon AMI —
 
 We will choose the “Amazon Linux 2 AMI” of the latest 5.10 Kernel with a 64-bit (x86) architecture, as seen below.
+
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/3daba989e62dddffc6a636aa3917556ad8ba99e8/Images/Screenshot%202024-12-23%20110706.png)
 
@@ -78,7 +81,9 @@ Click on the “Create new key pair” to create a new key pair, then enter your
 
 Click on “Create key pair”, as show below. The “.pm” file should automatically start downloading on your local system. Locate the file after the download is complete and store it in a safe directory. Later, we will use this key pair to connect to our EC2 Instance through ssh.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/5ff8c540b20a16518969953fe97ec39235c52c3d/Images/Screenshot%202024-12-23%20110925.png)
+
 
 Continue to the Network settings —
 
@@ -90,11 +95,14 @@ Continue to the Firewall (Security Group) settings —
 
 As stated below, Security Groups serve as a set of Firewall rules that you can use to control traffic to your instance. We are going to allow “SSH” traffic to enable us to securely connect to our EC2 Instance and also “HTTPS” and “HTTP” so we can send requests and be served our Webpage in our browser over the internet.
 
+
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/5d6c0e0be09ed085ef0f07e4127c94a1b2fc2ef8/Images/Screenshot%202024-12-23%20111021.png)
+
 
 Continue to the Summary —
 
 Make sure all configurations align with our previous steps, then click “Launch instance”, as seen below.
+
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/3e0dfedd8225d3b002a6571ad797287c5bdb4620/Images/Screenshot%202024-12-23%20111044.png)
 
@@ -132,6 +140,7 @@ To prevent others who may access your system from having unauthorized access to 
 Modify the permissions and verify the modifications were made by running the following two separate commands respectively —
 
 
+
 chmod 400 [key_pair_file_name]
 
 
@@ -157,7 +166,19 @@ If you did all the steps correctly, you should have similar results as seen belo
 
 Create new script directory and use vim to create and edit script file
 
+mkdir Scripts
+
+
+cd Scripts
+
+
 Use Vim or the Nano to create and edit a new script file with the following command —
+
+
+sudo chmod u+x [script_name.sh]
+
+
+./[scipt_name.sh]
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/20e4cf0757417f7579dfd0118794ac5e878c07d0/Images/Screenshot%202024-12-23%20115608.png)
 
@@ -170,6 +191,7 @@ The bash script above  updates all yum package repositories then installs an Apa
 Open your desired browser and paste the public IPv4 address of your Amazon EC2 Instance in the address bar, then hit “enter” on your keyboard.
 
 You should see your custom Website, as seen below!
+
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/0c334c4d5aab715cf4680d186cab9495cae1a43a/Images/Screenshot%202024-12-23%20115626.png)
 
