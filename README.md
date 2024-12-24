@@ -188,7 +188,11 @@ Open your desired browser and paste the public IPv4 address of your Amazon EC2 I
 
 You should see your custom Website, as seen below!
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/0c334c4d5aab715cf4680d186cab9495cae1a43a/Images/Screenshot%202024-12-23%20115626.png)
+
+# YAY Congratulations!
+
+You’ve automated the deployment of a Website using an Apache Web Server on an Amazon EC2 Instance.
 
 
 
