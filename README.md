@@ -152,10 +152,9 @@ If you did all the steps correctly, you should have similar results as seen belo
 
 Create new script directory and use vim to create and edit script file
 
-![image alt]()
-
-
 Use Vim or the Nano to create and edit a new script file with the following command —
+
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/20e4cf0757417f7579dfd0118794ac5e878c07d0/Images/Screenshot%202024-12-23%20115608.png)
 
 The bash script below updates all yum package repositories then installs an Apache Web Server to serve content to our browsers. The server is then started and then enabled. The last line adds html code to an “index.html” file which enables our Server to serve our custom Website through our EC2 Instance.
 
@@ -181,6 +180,15 @@ sudo chmod u+x [script_name.sh]
 
 
 ./[scipt_name.sh]
+
+
+# Step 4: View custom Webpage served by Apache Web Server, powered on EC2.
+
+Open your desired browser and paste the public IPv4 address of your Amazon EC2 Instance in the address bar, then hit “enter” on your keyboard.
+
+You should see your custom Website, as seen below!
+
+![image alt]()
 
 
 
