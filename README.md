@@ -78,7 +78,7 @@ Click on the “Create new key pair” to create a new key pair, then enter your
 
 Click on “Create key pair”, as show below. The “.pm” file should automatically start downloading on your local system. Locate the file after the download is complete and store it in a safe directory. Later, we will use this key pair to connect to our EC2 Instance through ssh.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/5ff8c540b20a16518969953fe97ec39235c52c3d/Images/Screenshot%202024-12-23%20110925.png)
 
 Continue to the Network settings —
 
