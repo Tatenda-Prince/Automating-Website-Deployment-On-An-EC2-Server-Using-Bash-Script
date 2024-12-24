@@ -145,7 +145,42 @@ ssh -i "[key_pair_name.pem]" ec2-user@[EC2_Public_IPv4_Address].compute-1.amazon
 Success!
 If you did all the steps correctly, you should have similar results as seen below and now you have connected into your EC2 Instance!
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/d5c6ecbecf06407c15579f2ec98c1148dc867d47/Images/Screenshot%202024-12-23%20112115.png)
+
+
+# Step 3: Create Bash Script to automate Website deployment
+
+Create new script directory and use vim to create and edit script file
+
 ![image alt]()
+
+
+Use Vim or the Nano to create and edit a new script file with the following command —
+
+The bash script below updates all yum package repositories then installs an Apache Web Server to serve content to our browsers. The server is then started and then enabled. The last line adds html code to an “index.html” file which enables our Server to serve our custom Website through our EC2 Instance.
+
+#!/bin/bash
+
+#Update all yum package repositories
+yum update -y
+
+#Install Apache Web Server
+yum install -y httpd.x86_64
+
+#Start and Enable Apache Web Server
+systemctl start httpd.service
+systemctl enable httpd.service
+
+#Adds our custom webpage html code to "index.html" file.
+echo "<html><body><h1>Welcome to REX TECH!</h1></body><html>" > /var/www/html/index.html
+
+
+We now need to give the user executable rights so we can run the script. To accomplish these two tasks, run the follow commands respectively —
+
+sudo chmod u+x [script_name.sh]
+
+
+./[scipt_name.sh]
 
 
 
