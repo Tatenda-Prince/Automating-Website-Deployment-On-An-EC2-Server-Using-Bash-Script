@@ -111,8 +111,32 @@ Navigate to your EC2 Instances and verify that the new EC2 Instance we just laun
 
 Once we’ve verified our EC2 Instance is running, navigate to the top right pane, click “Actions” and select “Connect” as seen below.
 
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/7698932cdadf80fd0d88c922021d6bff2321ea6f/Images/Screenshot%202024-12-23%20111154.png)
+
+Click on the “SSH Client tab”, as show below. AWS is helpful enough to suggest some instructions on how we connect to the EC2 Instance, however, I will walk you through the whole process.
+
 ![image alt]()
 
+Use Key pair to ssh into EC2 Instance from CLI on local system
+Locate the directory path where the downloaded key pair is stored and run the following command to change into that working directory —
+
+cd [key_pair_file_directory_path]
+
+
+To prevent others who may access your system from having unauthorized access to the key pair file, we need to modify the permissions of the file so only the user can read it.
+
+Modify the permissions and verify the modifications were made by running the following two separate commands respectively —
+
+
+chmod 400 [key_pair_file_name]
+
+
+ls -al
+
+Run ssh command passing in key pair file to authenticate into the EC2 Instance
+We need to run the ssh command in your CLI and in addition, add the “-i” option to pass the key pair file at the same time to authenticate into your EC2 Instance.
+
+You can find your EC2 Instance Public IPv4 address by navigating to the EC2 Instance dashboard and copying the “Pubic IPv4 address”, as seen below.
 
 
 
