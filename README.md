@@ -64,7 +64,7 @@ Continue to select the desired Amazon AMI —
 
 We will choose the “Amazon Linux 2 AMI” of the latest 5.10 Kernel with a 64-bit (x86) architecture, as seen below.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/3daba989e62dddffc6a636aa3917556ad8ba99e8/Images/Screenshot%202024-12-23%20110706.png)
 
 Proceed to the Instance Type options —
 
