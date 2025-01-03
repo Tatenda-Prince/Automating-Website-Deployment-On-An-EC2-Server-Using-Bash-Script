@@ -181,7 +181,7 @@ Create new script directory and use vim to create and edit script file
 4.sudo chmod u+x [script_name.sh]
 
 
-4../[scipt_name.sh]
+5../[scipt_name.sh]
 
 ![image alt](https://github.com/Tatenda-Prince/Automating-Website-Deployment-On-An-EC2-Server-Using-Bash-Script/blob/20e4cf0757417f7579dfd0118794ac5e878c07d0/Images/Screenshot%202024-12-23%20115608.png)
 
